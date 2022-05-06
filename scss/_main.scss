@@ -1,0 +1,16 @@
+.main {
+  grid-area: main;
+  text-align: center;
+  background-image: linear-gradient($primary-color, rgb(185, 79, 185));
+  font-family: "special elite", sans-serif;
+  p {
+    padding: 1rem;
+    word-spacing: 0.3rem;
+    font-size: 1.3rem;
+  }
+}
+h1 {
+  animation: efecto-abajo 1.5s ease;
+  font-size: 3.5rem;
+  padding: 2rem;
+}

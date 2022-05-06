@@ -1,0 +1,253 @@
+/* SASS */
+/* VARIABLES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "nunito", sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "header" "main" "footer";
+}
+
+.header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  background-image: linear-gradient(rgb(222, 180, 241), rgb(212, 152, 212));
+  box-shadow: 3px 5px 5px rgb(69, 58, 70);
+  align-items: center;
+  padding: 1.5rem;
+  z-index: 1;
+  position: sticky;
+  top: 0;
+  border-bottom: 0.3px solid rgb(178, 158, 179);
+}
+.header img {
+  width: 3rem;
+}
+.header li {
+  list-style-type: none;
+  display: inline-block;
+  margin-left: 2rem;
+}
+.header li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+.header li:hover {
+  opacity: 0.5;
+  color: black;
+  transition: color 0.5s;
+}
+
+.main {
+  grid-area: main;
+  text-align: center;
+  background-image: linear-gradient(rgb(212, 152, 212), rgb(185, 79, 185));
+  font-family: "special elite", sans-serif;
+}
+.main p {
+  padding: 1rem;
+  word-spacing: 0.3rem;
+  font-size: 1.3rem;
+}
+
+h1 {
+  animation: efecto-abajo 1.5s ease;
+  font-size: 3.5rem;
+  padding: 2rem;
+}
+
+/* QUIENES SOMOS*/
+.quienessomos-texto {
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  margin: 3rem;
+}
+
+/* USTEDES */
+.grid-container-ustedes {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas: "header " "galeria" "main-ustedes" "footer";
+}
+
+.main-ustedes {
+  grid-area: main-ustedes;
+  background-image: url(../img/diario.jpg);
+  font-family: "special elite", sans-serif;
+  text-align: center;
+  padding: 2rem;
+  justify-items: center;
+}
+.main-ustedes .card {
+  font-weight: 700;
+  font-size: 1rem;
+  background-color: rgb(251, 255, 226);
+  margin-top: 5px;
+  padding: 4px;
+}
+
+.fotos-ustedes {
+  display: flex;
+}
+
+.galeria {
+  grid-area: galeria;
+  display: inline-block;
+  text-align: center;
+  background-color: rgb(212, 152, 212);
+  padding: 2rem;
+  font-size: 5rem;
+  font-family: "special elite", sans-serif;
+}
+.galeria img {
+  width: 100%;
+  opacity: 1;
+  transition: opacity 1s;
+}
+.galeria img:hover {
+  opacity: 0.5;
+}
+
+/* CONTACTO */
+.grid-container-contacto {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto 1fr auto auto;
+  grid-template-areas: "header" "sidebar" "main-contacto" "footer";
+}
+
+iframe {
+  width: 100%;
+  height: 50%;
+}
+
+.main-contacto {
+  background-color: rgb(212, 152, 212);
+  text-align: center;
+  padding: 2rem;
+  grid-area: main-contacto;
+}
+
+form {
+  text-align: center;
+}
+
+fieldset {
+  display: inline-block;
+  width: 60%;
+  text-align: center;
+  font-family: "nunito", sans-serif;
+  background-color: salmon;
+  border: 1px solid rgb(255, 255, 255);
+  font-weight: 700;
+  padding: 1rem;
+}
+
+fieldset legend {
+  font-family: "special elite", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  padding: 3rem;
+  background-image: url(../img/arcoiris.jpg);
+}
+
+.boton {
+  background-color: rgb(212, 152, 212);
+  font-family: "nunito", sans-serif;
+  font-weight: 700;
+  padding: 4px;
+}
+
+/* PRODUCTOS */
+.productos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+
+.productos-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 1rem;
+  padding: 2rem;
+  font-family: "special elite", sans-serif;
+  padding: 2rem;
+  background-color: rgb(175, 138, 209);
+  margin: 2rem;
+}
+.productos-card img {
+  order: -1;
+  align-self: center;
+  padding-bottom: 2rem;
+}
+.productos-card button {
+  margin-top: 1rem;
+  background: rgb(122, 40, 122);
+  color: white;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 768px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: "header" "main" "footer";
+  }
+
+  .grid-container-ustedes {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: "header header" "galeria main-ustedes" "footer footer";
+  }
+
+  .grid-container-contacto {
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: "header header" "sidebar main-contacto" "footer footer";
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@keyframes efecto-abajo {
+  0% {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,33 @@
+.header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  background-image: linear-gradient(rgb(222, 180, 241), $primary-color);
+  box-shadow: 3px 5px 5px rgb(69, 58, 70);
+  align-items: center;
+  padding: 1.5rem;
+  z-index: 1;
+  position: sticky;
+  top: 0;
+  border-bottom: 0.3px solid rgb(178, 158, 179);
+  img {
+    width: 3rem;
+  }
+  li {
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 2rem;
+    a {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: white;
+      opacity: 1;
+      transition: opacity 0.5s;
+    }
+    &:hover {
+      opacity: 0.5;
+      color: black;
+      transition: color 0.5s;
+    }
+  }
+}

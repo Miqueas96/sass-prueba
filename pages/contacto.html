@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/unicornio.png" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&family=Special+Elite&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Unicornia Pride</title>
+  </head>
+  <body>
+    <div class="grid-container-contacto">
+      <header class="header">
+        <!-- NAVBAR -->
+        <a href="index.html">
+          <img src="../img/log.png" alt="logo" />
+        </a>
+        <nav class="nav">
+          <ul class="nav-list">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../pages/quienessomos.html">Quiénes somos</a></li>
+            <li><a href="../pages/productos.html">Productos</a></li>
+            <li><a href="../pages/ustedes.html">Ustedes</a></li>
+            <li><a href="../pages/contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <!-- FORMULARIO -->
+        <section class="main main-contacto">
+          <h1>¡Dejanos tu mensaje!</h1>
+          <form>
+            <fieldset>
+              <legend>¡Queremos saber de vos!</legend>
+              <label for="nombre">Nombre autopercibido:</label>
+              <input type="text" name="nombre" id="nombre" />
+              <br />
+              <label for="apellido">Apellido autopercibido:</label>
+              <input type="text" name="apellido" id="apellido" />
+              <div>¿Sos parte de la comunidad LGBTIQ+?</div>
+              <div>Sí</div>
+              <input type="radio" name="comunidad" value="si" />
+              <div>No</div>
+              <input type="radio" name="comunidad" value="no" />
+              <div>¿Con qué género te identificás?</div>
+              <select name="genero" id="genero">
+                <option value="genero_fluido">Género fluido</option>
+                <option value="no_binario">No binario</option>
+                <option value="mujer_cis">Mujer cis</option>
+                <option value="hombre_cis">Hombre cis</option>
+                <option value="mujer_trans">Mujer trans</option>
+                <option value="hombre_trans">Hombre trans</option>
+              </select>
+              <br />
+              <div>
+                ¿Te gustaría recibir más información sobre la comunidad LGBTIQ?
+              </div>
+              <input type="checkbox" name="acepta" value="1" />
+              <br />
+              <div>¡Compartinos tus ideas!</div>
+              <textarea
+                name="mensaje"
+                id="mensaje"
+                cols="30"
+                rows="10"
+              ></textarea>
+              <br />
+              <input class="boton" type="submit" value="Enviar" />
+              <input class="boton" type="reset" value="Limpiar" />
+            </fieldset>
+          </form>
+        </section>
+        <!-- SIDEBAR -->
+        <article class="sidebar">
+          <iframe
+            src="https://www.youtube.com/embed/zO5L5ikSEWo"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <iframe
+            src="https://www.youtube.com/embed/w05O_-yUQXc"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </article>
+      </main>
+      <!-- FOOTER -->
+      <footer class="footer">
+        <p>Copyright © 2022 Unicornia Pride. Todos los derechos reservados.</p>
+        <div class="link">
+          <a href="https://www.instagram.com/unicornia.pride/">
+            <img src="../img/ig.png" alt="instagram" />
+          </a>
+          <img src="../img/gmail.png" alt="gmail" />
+          <img src="../img/wpp.png" alt="whatsapp" />
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
