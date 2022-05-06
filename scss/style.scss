@@ -19,6 +19,71 @@ $secondary-color: rgb(122, 40, 122);
 
 @import "main";
 
+/* MAPAS */
+
+$headings: (
+    h1: 4rem,
+    h2: 2rem,
+)
+
+$colores: (
+    primary-color: rgb(212, 152, 212),
+    secondary-color: rgb(122, 40, 122),    
+);
+
+/* MAP-GET*/
+$h1: map-get($headings, h1);
+
+/* CLASE EXTENDIDA */
+
+.card_base {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 1rem;
+    padding: 2rem;
+    font-family: "special elite", sans-serif;
+    padding: 2rem;
+    background-color: rgb(175, 138, 209);
+    margin: 2rem;
+}
+.card_base_img {
+    order: -1;
+    align-self: center;
+    padding-bottom: 2rem;
+}
+
+.card_base_button {
+    margin-top: 1rem;
+    background: $secondary-color;
+    color: white;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.productos-card {
+  @extend .card_base;
+  > img {
+    @extend .card_base_img;
+  } button {
+    @extend .card_base_button;
+  }
+}
+
+/* MIXIN */
+
+@mixin container-body ($fondo, $ancho) {
+    background-color: $fondo;
+    width: $ancho;
+}
+
+.body {
+    @include container-body(linear-gradient($primary-color, rgb(185, 79, 185)), auto)
+}
+
 /* QUIENES SOMOS*/
 .quienessomos-texto {
   font-size: 1rem;
@@ -132,32 +197,7 @@ fieldset legend {
   grid-gap: 1rem;
 }
 
-.productos-card {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid black;
-  border-radius: 1rem;
-  padding: 2rem;
-  font-family: "special elite", sans-serif;
-  padding: 2rem;
-  background-color: rgb(175, 138, 209);
-  margin: 2rem;
-  img {
-    order: -1;
-    align-self: center;
-    padding-bottom: 2rem;
-  }
-  button {
-    margin-top: 1rem;
-    background: $secondary-color;
-    color: white;
-    padding: 0.5rem;
-    border: none;
-    border-radius: 1rem;
-    font-size: 1.2rem;
-    cursor: pointer;
-  }
-}
+
 
 /* MEDIA QUERIES */
 @media (min-width: 768px) {
